@@ -1,6 +1,9 @@
 import "package:flutter/material.dart";
 import "package:flutter_statemanagement/controllers/tap_controller.dart";
+import "package:flutter_statemanagement/second_page.dart";
 import "package:get/get.dart";
+
+import "./first_page.dart";
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -46,14 +49,16 @@ class HomePage extends StatelessWidget {
                     color: Color(0xFF89dad0)),
                 child: Center(
                   child: Text(
-                    "Tap",
+                    "Tap to Increase",
                     style: TextStyle(fontSize: 20, color: Colors.white),
                   ),
                 ),
               ),
             ),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Get.to(() => FirstPage());
+              },
               child: Container(
                 margin: const EdgeInsets.all(20),
                 width: double.infinity,
@@ -70,7 +75,9 @@ class HomePage extends StatelessWidget {
               ),
             ),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Get.to(() => SecondPage());
+              },
               child: Container(
                 margin: const EdgeInsets.all(20),
                 width: double.infinity,
@@ -80,7 +87,7 @@ class HomePage extends StatelessWidget {
                     color: Color(0xFF89dad0)),
                 child: Center(
                   child: Text(
-                    "Tap",
+                    "Go to Second Page",
                     style: TextStyle(fontSize: 20, color: Colors.white),
                   ),
                 ),

@@ -9,4 +9,10 @@ class TapController extends GetxController {
     update();
     print(_x);
   }
+
+  void decreaseX() {
+    _x--;
+    update();
+    print(_x);
+  }
 }
